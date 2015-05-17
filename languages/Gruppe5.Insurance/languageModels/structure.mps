@@ -38,7 +38,8 @@
     </language>
   </registry>
   <node concept="1TIwiD" id="3Z7ju6r9Ue3">
-    <property role="TrG5h" value="AbstractEntity" />
+    <property role="TrG5h" value="Entity" />
+    <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="3Z7ju6r9Ue4" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -49,45 +50,28 @@
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="3Z7ju6raesp" resolve="Attribute" />
     </node>
+    <node concept="1TJgyj" id="10bcRG9djUy" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="enities" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="10bcRG9ddJk" resolve="EntityReference" />
+    </node>
+    <node concept="1TJgyj" id="10bcRG9djUD" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="rules" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="10bcRG9djUX" resolve="RuleReference" />
+    </node>
+    <node concept="1TJgyj" id="10bcRG9djUM" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="formulas" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="10bcRG9ddJg" resolve="FormulaReference" />
+    </node>
     <node concept="1TJgyj" id="3Z7ju6rb8Nc" role="1TKVEi">
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="base" />
-      <ref role="20lvS9" node="3Z7ju6r9Ue3" resolve="AbstractEntity" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="3Z7ju6r9UfA">
-    <property role="TrG5h" value="AbstractInsurance" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="3Z7ju6r9UfB" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-    <node concept="1TJgyj" id="3Z7ju6raepO" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="attribute" />
-      <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="3Z7ju6raesp" resolve="Attribute" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="3Z7ju6raepF">
-    <property role="TrG5h" value="Contract" />
-    <property role="19KtqR" value="true" />
-    <node concept="1TJgyj" id="3Z7ju6raepG" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="abstractInsurance" />
-      <property role="20lbJX" value="1..n" />
-      <ref role="20lvS9" node="3Z7ju6r9UfA" resolve="AbstractInsurance" />
-    </node>
-    <node concept="1TJgyj" id="3Z7ju6raepJ" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="abstractEntity" />
-      <property role="20lbJX" value="1..n" />
-      <ref role="20lvS9" node="3Z7ju6r9Ue3" resolve="AbstractEntity" />
-    </node>
-    <node concept="1TJgyj" id="3Z7ju6raB0J" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="attribute" />
-      <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="3Z7ju6raesp" resolve="Attribute" />
+      <ref role="20lvS9" node="3Z7ju6r9Ue3" resolve="Entity" />
     </node>
   </node>
   <node concept="1TIwiD" id="3Z7ju6raesp">
@@ -103,9 +87,62 @@
       <ref role="20lvS9" to="tpee:fz3vP1H" resolve="Type" />
     </node>
   </node>
-  <node concept="1TIwiD" id="5bq_ocH3kaP">
-    <property role="TrG5h" value="Entity" />
+  <node concept="1TIwiD" id="10bcRG9cBqj">
+    <property role="TrG5h" value="Formula" />
+    <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="10bcRG9cFvz" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="expression" />
+      <ref role="20lvS9" to="tpee:fz3vP1J" resolve="Expression" />
+    </node>
+    <node concept="PrWs8" id="10bcRG9dmzz" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="10bcRG9ddJg">
+    <property role="TrG5h" value="FormulaReference" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="10bcRG9ddJh" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="formula" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="10bcRG9cBqj" resolve="Formula" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="10bcRG9ddJk">
+    <property role="TrG5h" value="EntityReference" />
+    <ref role="1TJDcQ" to="tpee:fz3vP1J" resolve="Expression" />
+    <node concept="1TJgyj" id="10bcRG9djUo" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="entity" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3Z7ju6r9Ue3" resolve="Entity" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="10bcRG9djUr">
+    <property role="TrG5h" value="Rule" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="10bcRG9djUv" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="statement" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpee:fzclF8l" resolve="Statement" />
+    </node>
+    <node concept="PrWs8" id="10bcRG9dmzA" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="10bcRG9djUX">
+    <property role="TrG5h" value="RuleReference" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="10bcRG9djUY" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="rule" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="10bcRG9djUr" resolve="Rule" />
+    </node>
   </node>
 </model>
 
