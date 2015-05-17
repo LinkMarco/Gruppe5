@@ -103,5 +103,9 @@
       <ref role="20lvS9" to="tpee:fz3vP1H" resolve="Type" />
     </node>
   </node>
+  <node concept="1TIwiD" id="5bq_ocH3kaP">
+    <property role="TrG5h" value="Entity" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
 </model>
 
