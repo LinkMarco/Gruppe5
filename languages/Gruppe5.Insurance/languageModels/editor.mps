@@ -67,13 +67,10 @@
         <node concept="3F0ifn" id="3Z7ju6rb8Nu" role="3EZMnx">
           <property role="3F0ifm" value="extends" />
         </node>
-        <node concept="3F0ifn" id="3Z7ju6rb8Oo" role="3EZMnx">
-          <property role="3F0ifm" value="(" />
-        </node>
-        <node concept="1iCGBv" id="3Z7ju6rb8OS" role="3EZMnx">
+        <node concept="1iCGBv" id="5BhVH4wwnof" role="3EZMnx">
           <ref role="1NtTu8" to="6dub:3Z7ju6rb8Nc" />
-          <node concept="1sVBvm" id="3Z7ju6rb8OU" role="1sWHZn">
-            <node concept="3F0A7n" id="3Z7ju6rb8Pk" role="2wV5jI">
+          <node concept="1sVBvm" id="5BhVH4wwnoh" role="1sWHZn">
+            <node concept="3F0A7n" id="5BhVH4wwnoG" role="2wV5jI">
               <property role="1Intyy" value="true" />
               <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
             </node>
@@ -197,6 +194,24 @@
         <node concept="3F0A7n" id="10bcRG9dm$i" role="2wV5jI">
           <property role="1Intyy" value="true" />
           <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="5BhVH4wwhDj">
+    <ref role="1XX52x" to="6dub:5Sgvwgw8U4Y" resolve="AttributeReference" />
+    <node concept="3EZMnI" id="5BhVH4wwhEA" role="2wV5jI">
+      <node concept="2iRfu4" id="5BhVH4wwhED" role="2iSdaV" />
+      <node concept="3F0ifn" id="5BhVH4wwrhT" role="3EZMnx">
+        <property role="3F0ifm" value="Person." />
+      </node>
+      <node concept="1iCGBv" id="5BhVH4wwrix" role="3EZMnx">
+        <ref role="1NtTu8" to="6dub:5Sgvwgw8U4Z" />
+        <node concept="1sVBvm" id="5BhVH4wwriz" role="1sWHZn">
+          <node concept="3F0A7n" id="5BhVH4wwriV" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
         </node>
       </node>
     </node>

@@ -7,7 +7,6 @@
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
-    <import index="6dub" ref="r:ef23bc61-87f1-46d4-a4cc-9153e68ebf75(Gruppe5.Insurance.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
   </imports>
@@ -142,6 +141,16 @@
       <property role="20kJfa" value="rule" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="10bcRG9djUr" resolve="Rule" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5Sgvwgw8U4Y">
+    <property role="TrG5h" value="AttributeReference" />
+    <ref role="1TJDcQ" to="tpee:fz3vP1J" resolve="Expression" />
+    <node concept="1TJgyj" id="5Sgvwgw8U4Z" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20lbJX" value="1" />
+      <property role="20kJfa" value="attribute" />
+      <ref role="20lvS9" node="3Z7ju6raesp" resolve="Attribute" />
     </node>
   </node>
 </model>
