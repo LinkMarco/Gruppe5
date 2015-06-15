@@ -10,6 +10,7 @@
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
+      <concept id="1092119917967" name="jetbrains.mps.baseLanguage.structure.MulExpression" flags="nn" index="17qRlL" />
       <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="1111509017652" name="jetbrains.mps.baseLanguage.structure.FloatingPointConstant" flags="nn" index="3b6qkQ">
         <property id="1113006610751" name="value" index="$nhwW" />
@@ -30,6 +31,17 @@
       </concept>
     </language>
     <language id="2d1a273a-5186-4810-add0-1cd132cdc91d" name="Gruppe5.Insurance">
+      <concept id="2670232085625496470" name="Gruppe5.Insurance.structure.Contract" flags="ng" index="mw79T">
+        <child id="2670232085625547185" name="contracts" index="mwjxu" />
+      </concept>
+      <concept id="2670232085625457499" name="Gruppe5.Insurance.structure.ContractGroup" flags="ng" index="mwdEO" />
+      <concept id="2670232085625547041" name="Gruppe5.Insurance.structure.ContractGroupReference" flags="ng" index="mwjze">
+        <reference id="2670232085625547042" name="contract" index="mwjzd" />
+        <child id="2670232085625474460" name="member" index="mw1LN" />
+      </concept>
+      <concept id="2670232085625904533" name="Gruppe5.Insurance.structure.EntityInstance" flags="ng" index="mASLU">
+        <reference id="2670232085625904583" name="instanceType" index="mASKC" />
+      </concept>
       <concept id="1156074332878960275" name="Gruppe5.Insurance.structure.Formula" flags="ng" index="peknC">
         <child id="1156074332878976995" name="expression" index="peoio" />
       </concept>
@@ -54,9 +66,6 @@
       <concept id="4595727576121009945" name="Gruppe5.Insurance.structure.Attribute" flags="ng" index="2$VUFS">
         <child id="4595727576121110201" name="type" index="2$Vido" />
       </concept>
-      <concept id="6778055995376771390" name="Gruppe5.Insurance.structure.AttributeReference" flags="ng" index="1YcXWU">
-        <reference id="6778055995376771391" name="attribute" index="1YcXWV" />
-      </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -78,17 +87,13 @@
       <property role="TrG5h" value="alter" />
       <node concept="10Oyi0" id="10bcRG9ehM7" role="2$Vido" />
     </node>
-    <node concept="2$VUFS" id="7bT5H3lKze2" role="2$VUFR">
-      <property role="TrG5h" value="mdfjgkl" />
-      <node concept="17QB3L" id="7bT5H3lKEPx" role="2$Vido" />
-    </node>
   </node>
   <node concept="2$SeTy" id="10bcRG9emuS">
     <property role="TrG5h" value="Vertrag" />
     <node concept="pfwR6" id="10bcRG9emYc" role="pfwRi">
       <ref role="pfwR5" node="10bcRG9emMG" resolve="randomRule" />
     </node>
-    <node concept="pfYyJ" id="10bcRG9emKT" role="pfwRp">
+    <node concept="pfYyJ" id="2ke$uWNzyCc" role="pfwRp">
       <ref role="pfwRz" node="10bcRG9ehKY" resolve="Person" />
     </node>
     <node concept="2$VUFS" id="10bcRG9emKr" role="2$VUFR">
@@ -101,17 +106,17 @@
   </node>
   <node concept="peknC" id="10bcRG9emv7">
     <property role="TrG5h" value="premium" />
-    <node concept="3cpWs3" id="5Sgvwgw8Y3A" role="peoio">
-      <node concept="3cpWs3" id="10bcRG9emIp" role="3uHU7B">
-        <node concept="3b6qkQ" id="10bcRG9emDq" role="3uHU7B">
+    <node concept="3cpWs3" id="10bcRG9emIp" role="peoio">
+      <node concept="3cmrfG" id="10bcRG9emIP" role="3uHU7w">
+        <property role="3cmrfH" value="1000" />
+      </node>
+      <node concept="17qRlL" id="10bcRG9emvf" role="3uHU7B">
+        <node concept="pfYyJ" id="7GAMFPC$IRK" role="3uHU7B">
+          <ref role="pfwRz" node="10bcRG9ehKY" resolve="Person" />
+        </node>
+        <node concept="3b6qkQ" id="10bcRG9emDq" role="3uHU7w">
           <property role="$nhwW" value="0.60" />
         </node>
-        <node concept="3cmrfG" id="10bcRG9emIP" role="3uHU7w">
-          <property role="3cmrfH" value="1000" />
-        </node>
-      </node>
-      <node concept="1YcXWU" id="5BhVH4wwgU$" role="3uHU7w">
-        <ref role="1YcXWV" node="10bcRG9ehLn" resolve="alter" />
       </node>
     </node>
   </node>
@@ -123,11 +128,38 @@
         <node concept="3cmrfG" id="10bcRG9emX5" role="3uHU7w">
           <property role="3cmrfH" value="50" />
         </node>
-        <node concept="1YcXWU" id="5Sgvwgw8YdI" role="3uHU7B">
-          <ref role="1YcXWV" node="10bcRG9ehLn" resolve="alter" />
+        <node concept="pfYyJ" id="10bcRG9emNj" role="3uHU7B">
+          <ref role="pfwRz" node="10bcRG9ehKY" resolve="Person" />
         </node>
       </node>
     </node>
+  </node>
+  <node concept="mw79T" id="2ke$uWN_cCm">
+    <property role="TrG5h" value="C1" />
+    <node concept="mwjze" id="2ke$uWNA8rf" role="mwjxu">
+      <ref role="mwjzd" node="2ke$uWNA8wN" resolve="ContractOwner" />
+      <node concept="mASLU" id="2ke$uWNA8rm" role="mw1LN">
+        <property role="TrG5h" value="asd" />
+        <ref role="mASKC" node="2ke$uWNzyCc" />
+      </node>
+      <node concept="mASLU" id="2ke$uWNA$b7" role="mw1LN">
+        <property role="TrG5h" value="p2" />
+        <ref role="mASKC" node="2ke$uWNzyCc" />
+      </node>
+    </node>
+    <node concept="mwjze" id="2ke$uWNA$bb" role="mwjxu">
+      <ref role="mwjzd" node="2ke$uWNA$bi" resolve="ContractTarget" />
+      <node concept="mASLU" id="2ke$uWNA$bN" role="mw1LN">
+        <property role="TrG5h" value="t1" />
+        <ref role="mASKC" node="2ke$uWNzyCc" />
+      </node>
+    </node>
+  </node>
+  <node concept="mwdEO" id="2ke$uWNA8wN">
+    <property role="TrG5h" value="ContractOwner" />
+  </node>
+  <node concept="mwdEO" id="2ke$uWNA$bi">
+    <property role="TrG5h" value="ContractTarget" />
   </node>
 </model>
 

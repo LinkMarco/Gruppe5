@@ -13,7 +13,9 @@
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
+        <property id="4628067390765907488" name="conceptShortDescription" index="R4oN_" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
+        <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
@@ -23,6 +25,9 @@
         <reference id="1071489389519" name="extends" index="1TJDcQ" />
         <child id="1169129564478" name="implements" index="PzmwI" />
       </concept>
+      <concept id="1071489288299" name="jetbrains.mps.lang.structure.structure.PropertyDeclaration" flags="ig" index="1TJgyi">
+        <reference id="1082985295845" name="dataType" index="AX2Wp" />
+      </concept>
       <concept id="1071489288298" name="jetbrains.mps.lang.structure.structure.LinkDeclaration" flags="ig" index="1TJgyj">
         <property id="1071599776563" name="role" index="20kJfa" />
         <property id="1071599893252" name="sourceCardinality" index="20lbJX" />
@@ -31,6 +36,9 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
@@ -40,6 +48,10 @@
     <property role="TrG5h" value="Entity" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="2ke$uWNBzOX" role="1TKVEl">
+      <property role="TrG5h" value="Type" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
     <node concept="PrWs8" id="3Z7ju6r9Ue4" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -141,6 +153,61 @@
       <property role="20kJfa" value="rule" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="10bcRG9djUr" resolve="Rule" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2ke$uWN_hQl">
+    <property role="3GE5qa" value="Contract" />
+    <property role="TrG5h" value="EntityInstance" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="2ke$uWN_hQm" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="2ke$uWN_hR7" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="instanceType" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="10bcRG9ddJk" resolve="EntityReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2ke$uWNz$Hr">
+    <property role="TrG5h" value="ContractGroup" />
+    <property role="19KtqR" value="true" />
+    <property role="3GE5qa" value="Contract" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="2ke$uWNzCBm" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2ke$uWNzIem">
+    <property role="TrG5h" value="Contract" />
+    <property role="19KtqR" value="true" />
+    <property role="R4oN_" value="Stellt einen Vertrag dar" />
+    <property role="3GE5qa" value="Contract" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="2ke$uWNzIen" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="2ke$uWNzUAL" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="contracts" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="2ke$uWNzU$x" resolve="ContractGroupReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2ke$uWNzU$x">
+    <property role="TrG5h" value="ContractGroupReference" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="2ke$uWNzCQs" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="member" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="2ke$uWN_hQl" resolve="EntityInstance" />
+    </node>
+    <node concept="1TJgyj" id="2ke$uWNzU$y" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="contract" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="2ke$uWNz$Hr" resolve="ContractGroup" />
     </node>
   </node>
   <node concept="1TIwiD" id="5Sgvwgw8U4Y">
