@@ -39,9 +39,6 @@
         <reference id="2670232085625547042" name="contract" index="mwjzd" />
         <child id="2670232085625474460" name="member" index="mw1LN" />
       </concept>
-      <concept id="2670232085625904533" name="Gruppe5.Insurance.structure.EntityInstance" flags="ng" index="mASLU">
-        <reference id="2670232085625904583" name="instanceType" index="mASKC" />
-      </concept>
       <concept id="1156074332878960275" name="Gruppe5.Insurance.structure.Formula" flags="ng" index="peknC">
         <child id="1156074332878976995" name="expression" index="peoio" />
       </concept>
@@ -65,6 +62,24 @@
       </concept>
       <concept id="4595727576121009945" name="Gruppe5.Insurance.structure.Attribute" flags="ng" index="2$VUFS">
         <child id="4595727576121110201" name="type" index="2$Vido" />
+      </concept>
+      <concept id="1554601994064383837" name="Gruppe5.Insurance.structure.EntityLitExpr" flags="ng" index="3MKk4r">
+        <reference id="1554601994064439902" name="entityLit" index="3MK2go" />
+        <child id="1554601994064472671" name="elements" index="3MKagp" />
+      </concept>
+      <concept id="1554601994063349419" name="Gruppe5.Insurance.structure.EntityType" flags="ng" index="3MOozH">
+        <reference id="1554601994064335058" name="entity" index="3MKDUk" />
+      </concept>
+      <concept id="1554601994063479140" name="Gruppe5.Insurance.structure.EntityVarDecl" flags="ng" index="3MPSWy">
+        <child id="1554601994063480108" name="declaredType" index="3MPSHE" />
+        <child id="1554601994064056492" name="expr" index="3MR_VE" />
+      </concept>
+      <concept id="1554601994064107370" name="Gruppe5.Insurance.structure.NumberLit" flags="ng" index="3MRh$G">
+        <property id="1554601994064107371" name="val" index="3MRh$H" />
+      </concept>
+      <concept id="1554601994064040050" name="Gruppe5.Insurance.structure.EntityLit" flags="ng" index="3MRxSO">
+        <reference id="1554601994064229923" name="vdec" index="3MRfx_" />
+        <child id="1554601994064040051" name="elements" index="3MRxSP" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -136,22 +151,28 @@
   </node>
   <node concept="mw79T" id="2ke$uWN_cCm">
     <property role="TrG5h" value="C1" />
-    <node concept="mwjze" id="2ke$uWNA8rf" role="mwjxu">
-      <ref role="mwjzd" node="2ke$uWNA8wN" resolve="ContractOwner" />
-      <node concept="mASLU" id="2ke$uWNA8rm" role="mw1LN">
-        <property role="TrG5h" value="asd" />
-        <ref role="mASKC" node="2ke$uWNzyCc" />
-      </node>
-      <node concept="mASLU" id="2ke$uWNA$b7" role="mw1LN">
-        <property role="TrG5h" value="p2" />
-        <ref role="mASKC" node="2ke$uWNzyCc" />
-      </node>
-    </node>
     <node concept="mwjze" id="2ke$uWNA$bb" role="mwjxu">
       <ref role="mwjzd" node="2ke$uWNA$bi" resolve="ContractTarget" />
-      <node concept="mASLU" id="2ke$uWNA$bN" role="mw1LN">
-        <property role="TrG5h" value="t1" />
-        <ref role="mASKC" node="2ke$uWNzyCc" />
+      <node concept="3MPSWy" id="1mj3$rBlf9H" role="mw1LN">
+        <property role="TrG5h" value="asd" />
+        <node concept="3MOozH" id="1mj3$rBlf9M" role="3MPSHE">
+          <ref role="3MKDUk" node="10bcRG9ehKY" resolve="Person" />
+        </node>
+        <node concept="3MRxSO" id="1mj3$rBlf9U" role="3MR_VE">
+          <ref role="3MRfx_" node="1mj3$rBlf9H" resolve="asd" />
+          <node concept="3MKk4r" id="1mj3$rBlfa4" role="3MRxSP">
+            <ref role="3MK2go" node="1mj3$rBlf9U" />
+            <node concept="3MRh$G" id="1mj3$rBlfa9" role="3MKagp">
+              <property role="3MRh$H" value="1" />
+            </node>
+            <node concept="3MRh$G" id="1mj3$rBlt9A" role="3MKagp">
+              <property role="3MRh$H" value="2" />
+            </node>
+            <node concept="3MRh$G" id="1mj3$rBltat" role="3MKagp">
+              <property role="3MRh$H" value="3" />
+            </node>
+          </node>
+        </node>
       </node>
     </node>
   </node>
