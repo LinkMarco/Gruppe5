@@ -9,8 +9,11 @@
   <imports />
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
+        <child id="1197027771414" name="operand" index="2Oq$k0" />
+        <child id="1197027833540" name="operation" index="2OqNvi" />
+      </concept>
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
-      <concept id="1092119917967" name="jetbrains.mps.baseLanguage.structure.MulExpression" flags="nn" index="17qRlL" />
       <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="1111509017652" name="jetbrains.mps.baseLanguage.structure.FloatingPointConstant" flags="nn" index="3b6qkQ">
         <property id="1113006610751" name="value" index="$nhwW" />
@@ -19,11 +22,19 @@
         <child id="1068580123160" name="condition" index="3clFbw" />
         <child id="1068580123161" name="ifTrue" index="3clFbx" />
       </concept>
-      <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS" />
+      <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
+        <child id="1068581517665" name="statement" index="3cqZAp" />
+      </concept>
+      <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT">
+        <property id="1068580123138" name="value" index="3clFbU" />
+      </concept>
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
       </concept>
       <concept id="1068581242875" name="jetbrains.mps.baseLanguage.structure.PlusExpression" flags="nn" index="3cpWs3" />
+      <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
+        <child id="1068581517676" name="expression" index="3cqZAk" />
+      </concept>
       <concept id="1081506762703" name="jetbrains.mps.baseLanguage.structure.GreaterThanExpression" flags="nn" index="3eOSWO" />
       <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
@@ -62,6 +73,9 @@
       </concept>
       <concept id="4595727576121009945" name="Gruppe5.Insurance.structure.Attribute" flags="ng" index="2$VUFS">
         <child id="4595727576121110201" name="type" index="2$Vido" />
+      </concept>
+      <concept id="3251883908042815233" name="Gruppe5.Insurance.structure.OperationOnEntity" flags="ng" index="18$BgI">
+        <reference id="3251883908043215497" name="attribute" index="18A96A" />
       </concept>
       <concept id="1554601994064383837" name="Gruppe5.Insurance.structure.EntityLitExpr" flags="ng" index="3MKk4r">
         <reference id="1554601994064439902" name="entityLit" index="3MK2go" />
@@ -125,9 +139,14 @@
       <node concept="3cmrfG" id="10bcRG9emIP" role="3uHU7w">
         <property role="3cmrfH" value="1000" />
       </node>
-      <node concept="17qRlL" id="10bcRG9emvf" role="3uHU7B">
-        <node concept="pfYyJ" id="7GAMFPC$IRK" role="3uHU7B">
-          <ref role="pfwRz" node="10bcRG9ehKY" resolve="Person" />
+      <node concept="3cpWs3" id="2Ox0MX_IcCu" role="3uHU7B">
+        <node concept="2OqwBi" id="2Ox0MX_IcFV" role="3uHU7B">
+          <node concept="pfYyJ" id="2Ox0MX_IcCR" role="2Oq$k0">
+            <ref role="pfwRz" node="10bcRG9ehKY" resolve="Person" />
+          </node>
+          <node concept="18$BgI" id="2Ox0MX_J6i4" role="2OqNvi">
+            <ref role="18A96A" node="10bcRG9ehLn" resolve="alter" />
+          </node>
         </node>
         <node concept="3b6qkQ" id="10bcRG9emDq" role="3uHU7w">
           <property role="$nhwW" value="0.60" />
@@ -138,13 +157,24 @@
   <node concept="pfwRw" id="10bcRG9emMG">
     <property role="TrG5h" value="randomRule" />
     <node concept="3clFbJ" id="10bcRG9emN0" role="pfwR$">
-      <node concept="3clFbS" id="10bcRG9emN2" role="3clFbx" />
+      <node concept="3clFbS" id="10bcRG9emN2" role="3clFbx">
+        <node concept="3cpWs6" id="2Ox0MX_InJA" role="3cqZAp">
+          <node concept="3clFbT" id="2Ox0MX_InJM" role="3cqZAk">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
       <node concept="3eOSWO" id="10bcRG9emWK" role="3clFbw">
         <node concept="3cmrfG" id="10bcRG9emX5" role="3uHU7w">
           <property role="3cmrfH" value="50" />
         </node>
-        <node concept="pfYyJ" id="10bcRG9emNj" role="3uHU7B">
-          <ref role="pfwRz" node="10bcRG9ehKY" resolve="Person" />
+        <node concept="2OqwBi" id="2Ox0MX_InIe" role="3uHU7B">
+          <node concept="pfYyJ" id="10bcRG9emNj" role="2Oq$k0">
+            <ref role="pfwRz" node="10bcRG9ehKY" resolve="Person" />
+          </node>
+          <node concept="18$BgI" id="2Ox0MX_J6u0" role="2OqNvi">
+            <ref role="18A96A" node="10bcRG9ehLn" resolve="alter" />
+          </node>
         </node>
       </node>
     </node>
