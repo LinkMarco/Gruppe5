@@ -14,6 +14,7 @@
         <child id="1197027833540" name="operation" index="2OqNvi" />
       </concept>
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
+      <concept id="1070534644030" name="jetbrains.mps.baseLanguage.structure.BooleanType" flags="in" index="10P_77" />
       <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="1111509017652" name="jetbrains.mps.baseLanguage.structure.FloatingPointConstant" flags="nn" index="3b6qkQ">
         <property id="1113006610751" name="value" index="$nhwW" />
@@ -129,6 +130,10 @@
       <property role="TrG5h" value="name" />
       <node concept="17QB3L" id="10bcRG9emKx" role="2$Vido" />
     </node>
+    <node concept="2$VUFS" id="7prBPy8BV3o" role="2$VUFR">
+      <property role="TrG5h" value="valide" />
+      <node concept="10P_77" id="7prBPy8BV3E" role="2$Vido" />
+    </node>
     <node concept="pfYyF" id="10bcRG9emL4" role="pfwR9">
       <ref role="pfYyE" node="10bcRG9emv7" resolve="premium" />
     </node>
@@ -140,16 +145,16 @@
         <property role="3cmrfH" value="1000" />
       </node>
       <node concept="3cpWs3" id="2Ox0MX_IcCu" role="3uHU7B">
-        <node concept="2OqwBi" id="2Ox0MX_IcFV" role="3uHU7B">
-          <node concept="pfYyJ" id="2Ox0MX_IcCR" role="2Oq$k0">
-            <ref role="pfwRz" node="10bcRG9ehKY" resolve="Person" />
-          </node>
-          <node concept="18$BgI" id="2Ox0MX_J6i4" role="2OqNvi">
-            <ref role="18A96A" node="10bcRG9ehLn" resolve="alter" />
-          </node>
-        </node>
         <node concept="3b6qkQ" id="10bcRG9emDq" role="3uHU7w">
           <property role="$nhwW" value="0.60" />
+        </node>
+        <node concept="2OqwBi" id="3JmWzGW5CO5" role="3uHU7B">
+          <node concept="pfYyJ" id="3JmWzGW5CL5" role="2Oq$k0">
+            <ref role="pfwRz" node="10bcRG9ehKY" resolve="Person" />
+          </node>
+          <node concept="18$BgI" id="3JmWzGW5COZ" role="2OqNvi">
+            <ref role="18A96A" node="10bcRG9ehLn" resolve="alter" />
+          </node>
         </node>
       </node>
     </node>
