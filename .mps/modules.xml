@@ -4,6 +4,7 @@
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/Gruppe5.Insurance/Gruppe5.Insurance.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/Gruppe5.Insurance/sandbox/Gruppe5.Insurance.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/generator_Insurance/generator_Insurance.mpl" folder="" />
     </projectModules>
   </component>
 </project>
