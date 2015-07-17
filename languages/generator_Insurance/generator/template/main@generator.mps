@@ -124,9 +124,11 @@
       <concept id="1168024337012" name="jetbrains.mps.lang.generator.structure.SourceSubstituteMacro_SourceNodeQuery" flags="in" index="3NFfHV" />
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
-      <concept id="1171310072040" name="jetbrains.mps.lang.smodel.structure.Node_GetContainingRootOperation" flags="nn" index="2Rxl7S" />
       <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
         <reference id="1138056395725" name="property" index="3TsBF5" />
+      </concept>
+      <concept id="1138056143562" name="jetbrains.mps.lang.smodel.structure.SLinkAccess" flags="nn" index="3TrEf2">
+        <reference id="1138056516764" name="link" index="3Tt5mk" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -238,7 +240,9 @@
                       <node concept="3clFbF" id="5prQt25OpPS" role="3cqZAp">
                         <node concept="2OqwBi" id="5prQt25OpRW" role="3clFbG">
                           <node concept="30H73N" id="5prQt25OpPR" role="2Oq$k0" />
-                          <node concept="2Rxl7S" id="5prQt25Oqb1" role="2OqNvi" />
+                          <node concept="3TrEf2" id="7w0XNo6cKD9" role="2OqNvi">
+                            <ref role="3Tt5mk" to="6dub:3Z7ju6rb8Nc" />
+                          </node>
                         </node>
                       </node>
                     </node>
